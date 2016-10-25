@@ -1,0 +1,35 @@
+plugins {
+    id "com.github.hierynomus.license" version "0.13.0"
+}
+
+version="4.0.1" 
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'distribution'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.apache.jackrabbit:jackrabbit-core:2.12.1",
+            "com.google.guava:guava:19.0",
+            "args4j:args4j:2.32",
+            "javax.jcr:jcr:2.0"
+}
+
+license {
+    header rootProject.file('src/main/license/xebialabs_community.license')
+    strictCheck false
+}
+
+distributions {
+    main {
+        contents {
+            from 'build/libs' 
+        }
+    }
+}
