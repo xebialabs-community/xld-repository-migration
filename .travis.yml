@@ -1,0 +1,12 @@
+language: java
+deploy:
+  provider: releases
+  api_key:
+    secure: UKmE94/PPRkObPE3M0E+XC4GlowOc6rwwWwKtLB1iKoLRg4SypLki6iX2A2ZvLgMukF+EovXVx4dZGJOXmGLULiENc35/qG/pPFEa/QMEogk4Y1DfuDFbtzR+1fqPcywuuuZk+nc+PBl/Rc5orUMxWPT/XgrvL2ojCnMM/pTIEDjwG9O2zvYXCexYc3iNeFJ82N5KgxZhqALs1eJse6S3RCLq6jHr8JPRHqRlY2Yj7fgQxSh1RwV+hVuWnQHqjfxX5IDwFF2jJYCSb3jWl/FWNUrO3k747O3xR2RD9qZ52cfhec/XnTqK9zjL7TYcjFN5x0arzhpziOahmVfZ1FB5LpJORUt1utUy01GeSw1n1jexb2aRuFPlHvkmAodLSpOhqn5I4TtSgkGJgBx6glP3hjthQxuDC+W7OyMTFjhAE0vVytNpJ5jIScZeS+PDLHtO40sNhCgJ2RR7TwrKyNYwz96ozJQ3k4D+PUkk34jm9nUVxWtNBkF3bttlbJuHodNZlWjqG8/mtcos2ZtopowTmRHxXn5GRiKC1Jsgp4Q2g4VuXdZECkicXXPO67TFhSugTJwv7B92r4/5VrPGPqcsOBQ2O7WnDwbS1OMsOzWWdgxeQZ+Rv5r2ao1ZRtGzEHAF19E3M0iwfsgIvYGU00gQrJ9axWgRmcVRGmn6Cm4yZ8=
+  file: build/distributions/xld-repository-migration-4.0.1.zip
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
+    repo: xebialabs-community/xld-repository-migration
+
