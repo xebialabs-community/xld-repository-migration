@@ -17,12 +17,12 @@ This script allows to migrate the XL Deploy Repository backend. The typical use 
     * a sample directory with 2 sample jackrabbit-repository XML files
 
 Copy the bin script files to the xl-deploy-server/bin directory, and copy the jar file to the xl-deploy-server/lib directory.
-2. If necessary, copy the jdbc drivers to the lib/ directory if your repository is plugged on a RDBMS (eg: ojdbc6.jar if your database is Oracle)
+2. If necessary, copy the jdbc drivers to the lib/ directory if your repository is plugged on a RDBMS. (eg: ojdbc6.jar if your database is Oracle)
 
 # Execution
 
 1. Configure the new target repository structure `jackrabbit-repository.xml`. Do *not* modify or override the existing file. See the documentation [System Administartion Manual](https://docs.xebialabs.com/xl-deploy/how-to/configure-the-xl-deploy-repository.html#using-a-database).
-2. Run the migration script
+2. Run the migration script.
 
 `bin/migrate.sh  -deployitHome <XL Deploy-Server-Home> -jackrabbit-config-file <Path-to-new-configuration-file> -repository-name <Name> -updateDeployitConfiguration`
 
