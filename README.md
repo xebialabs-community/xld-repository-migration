@@ -21,7 +21,7 @@ Copy the bin script files to the xl-deploy-server/bin directory, and copy the ja
 
 # Execution
 
-1. Configure the new target repository structure `jackrabbit-repository.xml`. Do *not* modify or override the existing file. see the documentation [System Administartion Manual](https://docs.xebialabs.com/xl-deploy/how-to/configure-the-xl-deploy-repository.html#using-a-database).
+1. Configure the new target repository structure `jackrabbit-repository.xml`. Do *not* modify or override the existing file. See the documentation [System Administartion Manual](https://docs.xebialabs.com/xl-deploy/how-to/configure-the-xl-deploy-repository.html#using-a-database).
 2. Run the migration script
 
 `bin/migrate.sh  -deployitHome <XL Deploy-Server-Home> -jackrabbit-config-file <Path-to-new-configuration-file> -repository-name <Name> -updateDeployitConfiguration`
