@@ -34,9 +34,9 @@ bin/migrate.sh  -deployitHome <XL Deploy-Server-Home> -jackrabbit-config-file <P
 bin/migrate.sh  -deployitHome /opt/xebialabs/xl-deploy-5.5.5-server -jackrabbit-config-file ./bin/jackrabbit-mysql-repository.xml  -repository-name migration-to-mysql -updateDeployitConfiguration
 ```
 
-Once the script has been successfully executed, you should have a new folder in the `SERVER_HOME/<Name>` directory having the <Name>. The `-updateDeployitConfiguration` flag updates the deployit.conf configuration file and copy the new jackrabbit configuration file to the conf/ directory. (previous jackrabbit configuration file is backed up)
+Once the script has been successfully executed, you should have a new folder in the `SERVER_HOME/<Name>` directory having the <Name>. The ``-updateDeployitConfiguration`` flag updates the ``deployit.conf`` configuration file and copy the new jackrabbit configuration file to the ``conf/`` directory. (previous jackrabbit configuration file is backed up)
 
 # Troubleshooting
 
-* Java out-of-memory errors:  increase the Java memory settings -Xmx and -XXMaxPermSize in the DEPLOYIT_SERVER_OPTS variable in migrate.sh or migrate.cmd.
-* Packet-size-too-large errors (when using a MySql database):  Increase the MaxAllowedPacketSize  under the [mysqld] tag in the my.cnf config file, by adding a line such as max_allowed_packet=1024m.  The my.cnf file may exist in multiple locations, allowing user, local, and general settings; and these locations may differ by OS, distribution, and version.
+* Java out-of-memory errors:  increase the Java memory settings ``-Xmx`` and ``-XXMaxPermSize`` in the ``DEPLOYIT_SERVER_OPTS`` variable in ``migrate.sh`` or ``migrate.cmd``.
+* Packet-size-too-large errors (when using a MySQL database):  Increase the ``MaxAllowedPacketSize``  under the [mysqld] tag in the ``my.cnf`` config file, by adding a line such as ``max_allowed_packet=1024m``.  The ``my.cnf`` file may exist in multiple locations, allowing user, local, and general settings; and these locations may differ by OS, distribution, and version.
