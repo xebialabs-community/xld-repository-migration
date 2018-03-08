@@ -24,10 +24,15 @@ Copy the bin script files to the xl-deploy-server/bin directory, and copy the ja
 1. Configure the new target repository structure `jackrabbit-repository.xml`. Do *not* modify or override the existing file. See the documentation [System Administartion Manual](https://docs.xebialabs.com/xl-deploy/how-to/configure-the-xl-deploy-repository.html#using-a-database).
 2. Run the migration script.
 
-`bin/migrate.sh  -deployitHome <XL Deploy-Server-Home> -jackrabbit-config-file <Path-to-new-configuration-file> -repository-name <Name> -updateDeployitConfiguration`
+```
+bin/migrate.sh  -deployitHome <XL Deploy-Server-Home> -jackrabbit-config-file <Path-to-new-configuration-file> -repository-name <Name> -updateDeployitConfiguration
+```
 
-Exemple
-`bin/migrate.sh  -deployitHome /opt/xebialabs/xl-deploy-5.5.5-server -jackrabbit-config-file ./bin/jackrabbit-mysql-repository.xml  -repository-name migration-to-mysql -updateDeployitConfiguration`
+### Example
+
+```
+bin/migrate.sh  -deployitHome /opt/xebialabs/xl-deploy-5.5.5-server -jackrabbit-config-file ./bin/jackrabbit-mysql-repository.xml  -repository-name migration-to-mysql -updateDeployitConfiguration
+```
 
 Once the script has been successfully executed, you should have a new folder in the `SERVER_HOME/<Name>` directory having the <Name>. The `-updateDeployitConfiguration` flag updates the deployit.conf configuration file and copy the new jackrabbit configuration file to the conf/ directory. (previous jackrabbit configuration file is backed up)
 
