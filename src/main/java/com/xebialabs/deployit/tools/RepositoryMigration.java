@@ -59,8 +59,10 @@ public class RepositoryMigration {
         RepositoryConfig source = RepositoryConfig.create(getConfigurationPath(deployitHomeDirectory), getRepositoryPath(deployitHomeDirectory));
         RepositoryConfig target = RepositoryConfig.create(repositoryConfigurationFile, newTargetRepositoryDirectory);
 
+        System.out.println("Before copy: " + start);
         RepositoryCopier.copy(source, target);
         final long stop = System.currentTimeMillis();
+        System.out.println("After copy: " + stop);
 
         if (updateConfiguration) {
             System.out.println("Update the configuration");
