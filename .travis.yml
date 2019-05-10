@@ -1,6 +1,6 @@
 language: java
 script:
-- ./gradlew jar distZip
+- "./gradlew jar distZip"
 deploy:
   provider: releases
   api_key:
@@ -11,4 +11,6 @@ deploy:
     all_branches: true
     tags: true
     repo: xebialabs-community/xld-repository-migration
-
+notifications:
+  slack:
+    secure: fCmqedVO5YZVns/O3fljQ7mfgCS9XbOBT508p+Nsr8wI18oUsFj8I28DCAn1c+oeS5L3EgWtY3duuRcxHQWgKdYvQgDQpaPfOT9X3EBQmCFE9M8RU80pJQrgs7C8kKqbtDiOPd5Zv08fjHZ8OvGt9KI7l2k81ji44A+Mo5ukPJ2hQyLaNIoOOc2zw6jLRkzZdq06GySPRD7skR10201bdB7fK6fvNF7rOOaAoziSG5P16EpGwJhH4bmwO38VsmJJVl6luJ9znn85ZU9Nm0ObwvlshFGc7Cm3ypuKRKO1qWS3eFmXVpTQrUGyr+z811aJt6QHZImAzkbwOBubGhJtfULOSqZ5rJaAQMcJCWeZjQNnaQ8wbu0UzKjlxG5IVefPaKXYPVah4l3mtZ8FsdL424B/6UVCwhuBbx7RVcx6S6jHfrgcjlUPTDp/wREWywURRyW+yUtqU456t6lhHR/C9Wsg+03MZ80gB1knpFwGYspXOp2mgM0CIkv1fdWe6iyZq6QxgsAwvmlWuuOJBJvX8lD0Kj9OkJNIqCIabLOrYxnUQWt6IfnNkHuRKGISVyFO0YJBzMgYRjNZdmR7qxBOr9+T/bpegkkLZnh3qEIe2EdIkkfnlKp6agDyJ6iH3YPx41b21vJiBOvj1DnflDmP54r3AKCRLlCFAWA3VbdntyA=
