@@ -39,11 +39,7 @@ if "%DEPLOYIT_SERVER_HOME%"=="" (
 cd /d "%DEPLOYIT_SERVER_HOME%"
 
 REM Build Deployit server classpath
-set DEPLOYIT_SERVER_CLASSPATH=conf;ext
-for %%i in (hotfix\*.jar) do set DEPLOYIT_SERVER_CLASSPATH=!DEPLOYIT_SERVER_CLASSPATH!;%%i
-for %%i in (lib\*.jar) do set DEPLOYIT_SERVER_CLASSPATH=!DEPLOYIT_SERVER_CLASSPATH!;%%i
-for %%i in (plugins\*.jar) do set DEPLOYIT_SERVER_CLASSPATH=!DEPLOYIT_SERVER_CLASSPATH!;%%i
-for /d %%i in (plugins\*) do set DEPLOYIT_SERVER_CLASSPATH=!DEPLOYIT_SERVER_CLASSPATH!;%%i
+set DEPLOYIT_SERVER_CLASSPATH="%DEPLOYIT_SERVER_HOME%\conf\*;%DEPLOYIT_SERVER_HOME%\ext\*;%DEPLOYIT_SERVER_HOME%\hotfix\*;%DEPLOYIT_SERVER_HOME%\lib\*;%DEPLOYIT_SERVER_HOME%\plugins\*"
 
 REM Run Deployit server
 %JAVACMD% %DEPLOYIT_SERVER_OPTS% %DEPLOYIT_SERVER_LOG_OPTS% -cp "%DEPLOYIT_SERVER_CLASSPATH%" com.xebialabs.deployit.tools.RepositoryMigration %*
